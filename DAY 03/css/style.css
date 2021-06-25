@@ -3,7 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
+body{
+    padding: 4rem 5rem;
+    background-color: #888;
+}
+
 h1{ 
+
+    padding: 1rem 0;
     text-transform: uppercase;
     font-size: 2rem;
 
@@ -28,8 +37,9 @@ h3{
     font-size: 2rem;
     text-transform: uppercase;
     padding: 1rem 0;
-    border-bottom: 1px solid #888; 
-    margin-bottom: 2rem;
+    
+    border-top:1px solid #888;
+    border-bottom: 1px solid #888;
 }
 
 
@@ -40,12 +50,15 @@ html{
     font-family: 'josefin Sans';
 
 }
-.p{
+p{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     line height: 1.5;
 }
 
 .section + .section{
 
+    padding: 1rem 0;
     margin-top: 2rem;
     margin-bottom: 2rem;
 
@@ -57,25 +70,35 @@ html{
 }
 
 .profile img{
+    object-fit:cover;
+    margin-bottom: 1rem;
     border-radius: 9999px;
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 15rem;
 }
 
 .profile{
+    margin-top: 1rem;
     text-align: center;
 }
 
 
 
-.ul{
-
+ul{
+    list-style:none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-decoration: none;
 }
 
+li{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
 .profile p{
     color: #888;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     
 
@@ -85,9 +108,7 @@ html{
 .contact li {
     text-align: right;
     text-transform: uppercase;
-    padding: 1rem;
-    border-top:1px solid #888;
-    border-bottom: 1px solid #888;
+    padding: 1.5rem 0;
 
 
 
@@ -101,3 +122,17 @@ html{
 .li + .li {
     margin-top:0.5rem;
 } 
+
+
+.line{
+    border-left: 1px solid #888;
+}
+
+
+.resumep{
+    display: grid;
+    grid-gap: 4rem;
+    background-color: aliceblue;
+    padding: 2rem;
+
+}
