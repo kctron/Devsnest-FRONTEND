@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/DAY_04 /css/style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <title>DAY-04-FRONTEND</title>
+</head>
+
+<body>
+    <!-- <h1>Clock</h1> -->
+
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const sc = document.querySelector('#sc');
+
+        setInterval(() => {
+
+
+            Let day = new Date();
+            Let hh = day.getHours() * 30;
+            Let mm = day.getMinutes() * deg;
+            Let ss = day.getSeconds() * deg;
+
+
+            hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`
+              ;
+            mn.style.transform =  `rotateZ(${mm}deg)`;
+            sc.style.transform = `rotateZ(${ss}deg)`;
+
+        })
+  
+    </script>
+
+
+</body>
+
+</html>
