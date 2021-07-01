@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #091921;
+    background-color: #989c9e;
 }
 
 .clock{
@@ -78,6 +78,8 @@ body{
     background: #ff105e;
     z-index: 10;
     border-radius: 6px 6px 0 0;
+    transform: rotate(30deg);
+    left:60%
 }
 .mn:before
 {
