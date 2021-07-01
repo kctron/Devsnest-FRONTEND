@@ -4,55 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/DAY_05/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="index.js"></script>
     <title>FRONTEND-DAY05</title>
 </head>
 <body>
     
-    <div class="container">
+    <div class="container" align="center">
         <h1>Calculator</h1>
+        <form name="forms">
+            <div class="calculator">
+                <input type="text" id="answer" name="screen"> <br>
+                <input type="button" value=" 7 " onclick="forms.screen.value+='7'">
+                <input type="button" value=" 8 " onclick="forms.screen.value+='8'">
+                <input type="button" value=" 9 " onclick="forms.screen.value+='9'">
+                <input type="button" value=" / " onclick="forms.screen.value+='/'">
+                <input type="button" class="btn-red" value=" AC " onclick="forms.screen.value=''"> <br>
+                
+                
+                <input type="button" value=" 4 " onclick="forms.screen.value+='4'">
+                <input type="button" value=" 5 " onclick="forms.screen.value+='5'">
+                <input type="button" value=" 6 " onclick="forms.screen.value+='6'">
+                <input type="button" value=" * " onclick="forms.screen.value+='*'">
+                <input type="button" value=" % " onclick="forms.screen.value+='%'"> <br>
+                
+                
+                <input type="button" value=" 1 " onclick="forms.screen.value+='1'">
+                <input type="button" value=" 2 " onclick="forms.screen.value+='2'">
+                <input type="button" value=" 3 " onclick="forms.screen.value+='3'">
+                <input type="button" value=" + " onclick="forms.screen.value+='+'">
+                <input type="button" value=" - " onclick="forms.screen.value+=''"> <br>
 
-    <div class="calculator">    
-        <input type="text" name="screen" id="screen">
 
-    <table>
-        <tr>
-            <td><button>(</button></td>
-            <td><button>)</button></td>
-            <td><button>C</button></td>
-            <td><button>X</button></td>
-        </tr>
+                <input type="button" value=" 0 " onclick="forms.screen.value+='0'">
+                <input type="button" value=" 00 " onclick="forms.screen.value+='00'">
+                <input type="button" value=" 000 " onclick="forms.screen.value+='000'">
+                <input type="button" value=" . " onclick="forms.screen.value+='/'">
+                <input type="button" class="btn-blue" value=" = " onclick="forms.screen.value= eval(forms.screen.value)">
 
-        <tr>
-            <td><button>7</button></td>
-            <td><button>8</button></td>
-            <td><button>9</button></td>
-            <td><button>-</button></td>
-        </tr>
-        <tr>
-            <td><button>4</button></td>
-            <td><button>5</button></td>
-            <td><button>6</button></td>
-            <td><button>+</button></td>
-        </tr>
-        <tr>
-            <td><button>1</button></td>
-            <td><button>2</button></td>
-            <td><button>3</button></td>
-            <td><button>%</button></td>
-        </tr>
-        <tr>
-            <td><button>.</button></td>
-            <td><button>0</button></td>
-            <td><button>/</button></td>
-            <td><button>=</button></td>
-        </tr>
-    </table>
-</div>
+            </div>
+
+        </form>
+
+   
 
     </div>
 </div>
     
 </body>
-<script src="/DAY_05/index.js"></script>
 </html>
