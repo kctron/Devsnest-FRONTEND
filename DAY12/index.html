@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    *{
+        /* border: 1px solid black; */
+        /* border: 0; */
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #2980B9; 
+        background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ff10eb, #493fda, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    #todoApp{
+        border: 1px solid black;
+        margin: 5rem auto;
+        width:60%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: repeat(3, 1fr);
+        /* grid-gap: 10px; */
+    }
+    header{
+        background: #2980b9;
+        padding: 10px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    input[type=text]{
+        font-size: 24px;
+        padding: 10px;
+        width: 100%;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+    }
+    li{
+        list-style: none;
+        background-color:white;
+        display:grid;
+        grid-template-columns: 1fr 10fr;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+    }
+    .unseen{
+        background: red;
+        padding: 1em;
+        color: #fff;
+        margin-right: 2px;
+        display: none;
+    }
+    
+    .hide{
+        display: none;
+    }
+    li{
+        /* margin-left: 10px; */
+        font-size:1.5em;
+        padding: 10px 20px;
+        /* flex-grow: 1; */
+    }
+    li:hover{
+        padding: 0;
+    }
+    li:hover .unseen{
+        display: inline;
+        font-size:15px;
+        margin-right: 10px;
+    }
+    .complete{
+        text-decoration: line-through;
+    }
+    </style>
+</head>
+<body onload="getTodos()">
+    <div id="todoApp">
+
+        <header>
+            <h1>TODO-LIST</h1>
+            <div class="fa fa-plus fa-2x" id="addNewItem"></div>
+        </header>
+        <input type="text" id="addNewTodo" placeholder="Add a to-do" onkeypress="addNewTodo(e)">
+        <ul id="mainList">
+        </ul>
+    </div>
+
+<script>
+let todos = document.getElementById("mainList")
+var inp = document.querySelector("#addNewTodo");
+document.querySelector("#addNewItem").addEventListener("click", () => {
+    inp.classList.toggle("hide");
+})
+
+function getTodos(){
+  let todoList = localStorage.getItem("todos");
+  todos.innerHTML = todoList;
+}
+
+
+inp.addEventListener("keypress", (e) => {
+  if(e.code === "Enter"){
+    let todo = inp.value;
+    if(todo){
+    let listItem = `<li><span class="unseen"><i class="fa fa-trash"></i></span>${todo}</li>`;
+    console.log(listItem);
+    document.getElementById("mainList").innerHTML += listItem;
+    inp.value = "";
+  }else{
+    alert("Enter a valid todo");
+  }
+    localStorage.setItem('todos', todos.innerHTML);
+  }
+})
+
+document.querySelector("ul").addEventListener('click', (e) => {
+  if(e.target.tagName === "I"){
+      e.target.parentElement.parentElement.remove();
+  }
+  if(e.target.tagName === "SPAN"){
+    e.target.parentElement.remove();
+  }
+  localStorage.setItem('todos', todos.innerHTML);
+});
+
+document.querySelector("ul").addEventListener('click', (e) => {
+    e.target.classList.toggle('complete');
+    localStorage.setItem('todos', todos.innerHTML);
+});
+
+
+</script>
+</body>
+</html>
+    
+</body>
+</html>
