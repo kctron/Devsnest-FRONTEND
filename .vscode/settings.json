@@ -1,3 +1,4 @@
 {
-    "editor.multiCursorMergeOverlapping": false
+    "editor.multiCursorMergeOverlapping": false,
+    "editor.wordWrap": "on"
 }
