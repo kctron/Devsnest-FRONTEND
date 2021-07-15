@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  width: 50vw;
+  height: 70vh;
+  overflow-y: scroll;
+  border: 5px solid rgb(98, 78, 78);
+  /* box-shadow: 2px rgb(105, 103, 103); */
+  
+
+}
+
+.head{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.text{
+  background-color: yellowgreen ;
+  height: 70px;
+  margin: 10px;
+  border-radius: 10px;
+  
+}
+.text1{
+  background-color: yellowgreen ;
+  height: 70px;
+  margin: 10px;
+  border-radius: 10px;
+  /* position: relative; */
+  /* top: 20px; */
+}
+.text2{ 
+  background-color: yellowgreen ;
+  height: 70px;
+  margin: 10px;
+
+  border-radius: 10px;
+  /* position: relative; */
+  /* top: 20px; */
+}
+.text3{
+  background-color: yellowgreen ;
+  height: 70px;
+  margin: 10px;
+  border-radius: 10px;
+  /* position: relative;  */
+  /* top: 20px; */
+}
+.text4{
+  background-color: yellowgreen ;
+  height: 70px;
+  margin: 10px;
+  border-radius: 10px;
+  /* position: relative;  */
+  /* top: 20px;  */
+}
+.text5{
+  background-color: yellowgreen ;
+  height: 70px;
+  margin: 10px;
+  border-radius: 10px;
+  /* position: relative;  */
+  /* top: 20px;  */
+}
