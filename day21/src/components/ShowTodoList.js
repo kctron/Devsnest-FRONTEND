@@ -2,7 +2,7 @@ import { useState } from "react";
 import TodoItem from "./TodoItem";
 
 const ShowTodoList = ({ todos }) => {
-const [itemCount, setItemCount] = useState(0);
+  const [itemCount, setItemCount] = useState(0);
   return (
     <div className="TodoList">
       {itemCount ? (
